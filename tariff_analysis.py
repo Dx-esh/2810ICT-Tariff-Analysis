@@ -73,7 +73,7 @@ def calculate_tiered_bill(consumption, tiers, fixed_fee):
 
 def calculate_saving_suggestion(current_cost, alternative_cost):
     """
-    Calculates the money saved on electricital bills between two differing tariffs
+    Calculates the money saved on electrical bills between two differing tariffs
 
     @param - current_cost: float, cost of electricity under the current tariff
              alternative_cost: float, cost of electricity under an alternative tariff
