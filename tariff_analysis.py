@@ -18,7 +18,13 @@ def calculate_flat_rate_bill(consumption, rate, fixed_fee):
     if fixed_fee < 0:
         raise ValueError("Fixed monthly fee cannot be negative.")
 
-    return (consumption * rate) + fixed_fee
+    if consumption == 0:
+        total = fixed_fee
+    else:
+        cost = consumption * rate
+        total = cost + fixed_fee
+
+    return total
 
 
 def calculate_tiered_bill(consumption, tiers, fixed_fee):
@@ -89,6 +95,13 @@ def calculate_saving_suggestion(current_cost, alternative_cost):
 
     # If current tariff is more expensive, subtract alternative tariff. Otherwise, return 0
     if alternative_cost < current_cost:
-        return current_cost - alternative_cost
+        total = current_cost - alternative_cost
+        return total
+
+    elif alternative_cost == current_cost:
+        total = 0.0
+        return total
+
     else:
-        return 0.0
+        total = 0.0
+        return total
