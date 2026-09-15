@@ -34,5 +34,6 @@ saving = calculate_saving_suggestion(flat_bill, tiered_bill)
 if saving > 0:
     print(f"Potential saving: ${saving:.2f}")
 else:
-    extra_cost = tiered_bill - flat_bill
-    print(f"The alternative tariff costs ${extra_cost:.2f} more.")
+    print(f"The alternative tariff does not save any money.")
+    # extra_cost = tiered_bill - flat_bill
+    # print(f"The alternative tariff costs ${extra_cost:.2f} more.")
